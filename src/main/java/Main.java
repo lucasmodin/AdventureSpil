@@ -3,5 +3,6 @@ public class Main {
         System.out.println("Davs Lucas og dav");
         System.out.println("kage og kaffe er sundt!");
         System.out.println("lol");
+        System.out.println("lol2");
     }
 }
