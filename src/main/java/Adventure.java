@@ -14,16 +14,16 @@ public class Adventure {
     //Constructor is set to room1 for the starting point
     public Adventure(){
         room1 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
-        room2 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
-        room3 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
-        room4 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
-        room5 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
-        room6 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
-        room7 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
-        room8 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
-        room9 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+        room2 = new Rooms("\"Prison\": " , "Dark place where light is dim");
+        room3 = new Rooms("\"Cave\": " , "Dark place where light is dim");
+        room4 = new Rooms("\"Forest\": " , "Dark place where light is dim");
+        room5 = new Rooms("\"Creek\": " , "Dark place where light is dim");
+        room6 = new Rooms("\"Sprawling City\": " , "Dark place where light is dim");
+        room7 = new Rooms("\"Castle\": " , "Dark place where light is dim");
+        room8 = new Rooms("\"Basement\": " , "Dark place where light is dim");
+        room9 = new Rooms("\"Catacombs\": " , "Dark place where light is dim");
 
-        room1.setW(room2);
+        room1.setE(room2);
         room1.setS(room4);
 
         room2.setE(room3);
@@ -53,28 +53,54 @@ public class Adventure {
         currentRoom = room1;
     }
 
+    //Metoden tager parameteren String userinput, som bruges til at tage brugerinput og skifte mellem hver case alt efter hvad brugeren indtaster.
+
+    public void movePlayer (String userInput) {
 
 
-    public String look(){
+        switch (userInput) {
+
+            case "north":
+                if (currentRoom.getN() != null) {
+                    currentRoom = currentRoom.getN();
+                }
+                break;
+
+            case "east":
+                if (currentRoom.getE() != null) {
+                    currentRoom = currentRoom.getE();
+                }
+                break;
+
+            case "west":
+                if (currentRoom.getW() != null) {
+                    currentRoom = currentRoom.getW();
+                }
+                break;
+
+            case "south":
+                if (currentRoom.getS() != null) {
+                    currentRoom = currentRoom.getS();
+                }
+                break;
+
+            case "look":
+
+                break;
+
+            default:
+                System.out.println("Please enter north, east, south or west");
+                break;
+            }
+
+
+    }
+
+    public String roomNameAndDescription(){
         return currentRoom.getName() + currentRoom.getDescription();
     }
 //    public Rooms getRoom(){
 //        return currentRoom
 //    }
 
-    public void goNorth(){
-
-    }
-
-    public void goSouth(){
-
-    }
-
-    public void goWest(){
-
-    }
-
-    public void goEast(){
-
-    }
 }

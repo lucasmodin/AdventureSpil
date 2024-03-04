@@ -1,49 +1,22 @@
 import java.util.Scanner;
 
 public class UserInterface {
+    //Opretter Adventure klasse objekt og Scanner objekt
     Adventure adventure = new Adventure();
+    Scanner input = new Scanner(System.in);
 
+    //Opretter en startGame metode
     public void startGame(){
-        Scanner input = new Scanner(System.in);
-        String userInput =input.nextLine().toLowerCase();
 
-        switch (userInput) {
+        //Opsætter et do-while loop, så vi kan bevæge os rundt i rummene (se movePlayer metode i Adventure klassen)
 
-            case "north":
+        String userInput;
 
-                break;
-
-            case "south":
-
-                break;
-
-            case "west":
-
-                break;
-
-            case "east":
-
-                break;
-
-            case "look":
-
-                break;
-
-            case "help":
-
-                break;
-
-            case "exit":
-
-                break;
-
-
-
-        }
-
-
-
-
+        do {
+            System.out.println(adventure.roomNameAndDescription());
+            userInput = input.nextLine();
+            adventure.movePlayer(userInput);
+        }while (!userInput.equalsIgnoreCase("exit"));
     }
 
 
