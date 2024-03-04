@@ -3,21 +3,21 @@ public class Rooms {
     //Declaring the room attributes
     private String name;
     private String description;
-    private int n;
-    private int e;
-    private int s;
-    private int w;
+    private Rooms n;
+    private Rooms e;
+    private Rooms s;
+    private Rooms w;
 
 
     //Setting up the constructor for the rooms
-    public Rooms(String name, String description,int n, int e, int s, int w){
+    public Rooms(String name, String description, Rooms n, Rooms e, Rooms s, Rooms w){
         this.name = name;
         this.description = description;
 
-        this.n = n;
-        this.e = e;
-        this.s = s;
-        this.w = w;
+        this.n = null;
+        this.e = null;
+        this.s = null;
+        this.w = null;
     }
 
     //Getter and setter methods
@@ -29,35 +29,35 @@ public class Rooms {
         return description;
     }
 
-    public int getN() {
+    public Rooms getN() {
         return n;
     }
 
-    public int getE(){
+    public Rooms getE(){
         return e;
     }
 
-    public int getS(){
+    public Rooms getS(){
         return s;
     }
 
-    public int getW(){
+    public Rooms getW(){
         return w;
     }
 
-    public void setN(int n){
+    public void setN(Rooms n){
         this.n = n;
     }
 
-    public void setE(int e){
+    public void setE(Rooms e){
         this.e = e;
     }
 
-    public void setS(int s){
+    public void setS(Rooms s){
         this.s = s;
     }
 
-    public void setW(int w) {
+    public void setW(Rooms w) {
         this.w = w;
     }
 
