@@ -10,7 +10,7 @@ public class Rooms {
 
 
     //Setting up the constructor for the rooms
-    public Rooms(String name, String description, Rooms n, Rooms e, Rooms s, Rooms w){
+    public Rooms(String name, String description){
         this.name = name;
         this.description = description;
 
@@ -49,7 +49,7 @@ public class Rooms {
         this.n = n;
     }
 
-    public void setE(Rooms e){
+    public void setE(){
         this.e = e;
     }
 

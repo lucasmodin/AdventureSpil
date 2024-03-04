@@ -12,22 +12,14 @@ public class Adventure {
 
     //Constructor is set to room1 for the starting point
     public Adventure(){
-        room1 = new Rooms("\"Dungeon\": " ,
-                "Dark place where light is dim", setEast.room2, setSouth.room4);
-        room2 = new Rooms("\"Dungeon\": " ,
-                "Dark place where light is dim",  setEast.room3, setWest.room1);
-        room3 = new Rooms("\"Dungeon\": " ,
-                "Dark place where light is dim", setSouth.room6, setWest.room2);
-        room4 = new Rooms("\"Dungeon\": " ,
-                "Dark place where light is dim", setNorth.room1, setSouth.Room7);
-        room5 = new Rooms("\"Dungeon\": " ,
-                "Dark place where light is dim", setSouth.room8);
-        room6 = new Rooms("\"Dungeon\": " ,
-                "Dark place where light is dim", setNorth.room3, setSouth.room9);
-        room7 = new Rooms("\"Dungeon\": " ,
-                "Dark place where light is dim", setNorth.Room4, setEast.room8);
-        room8 = new Rooms("\"Dungeon\": " ,
-                "Dark place where light is dim", setNorth.room5, setEast.room9, setWest.room7);
+        room1 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+        room2 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+        room3 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+        room4 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+        room5 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+        room6 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+        room7 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+        room8 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
 
         currentRoom = room1;
     }
