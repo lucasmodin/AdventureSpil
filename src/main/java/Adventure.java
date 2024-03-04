@@ -1,16 +1,34 @@
 public class Adventure {
-    Rooms room1 = new Rooms("\"Dungeon\": " , "Dark place where light is dim", -1, 1, 3, -1);
-    Rooms room2 = new Rooms("\"Dungeon\": " , "Dark place where light is dim", -1, 1, -1, 0);
-    Rooms room3 = new Rooms("\"Dungeon\": " , "Dark place where light is dim", -1, -1, 5, 1);
-    Rooms room4 = new Rooms("\"Dungeon\": " , "Dark place where light is dim", 0, -1, 6, -1);
-    Rooms room5 = new Rooms("\"Dungeon\": " , "Dark place where light is dim", -1, -1, 7, -1);
-    Rooms room6 = new Rooms("\"Dungeon\": " , "Dark place where light is dim", 2, -1, 8, -1);
-    Rooms room7 = new Rooms("\"Dungeon\": " , "Dark place where light is dim", 3, 7, -1, -1);
-    Rooms room8 = new Rooms("\"Dungeon\": " , "Dark place where light is dim", 4, 8, -1, 6);
+    Rooms room1;
+    Rooms room2;
+    Rooms room3;
+    Rooms room4;
+    Rooms room5;
+    Rooms room6;
+    Rooms room7;
+    Rooms room8;
 
     private Rooms currentRoom;
 
+    //Constructor is set to room1 for the starting point
     public Adventure(){
+        room1 = new Rooms("\"Dungeon\": " ,
+                "Dark place where light is dim", setEast.room2, setSouth.room4);
+        room2 = new Rooms("\"Dungeon\": " ,
+                "Dark place where light is dim",  setEast.room3, setWest.room1);
+        room3 = new Rooms("\"Dungeon\": " ,
+                "Dark place where light is dim", setSouth.room6, setWest.room2);
+        room4 = new Rooms("\"Dungeon\": " ,
+                "Dark place where light is dim", setNorth.room1, setSouth.Room7);
+        room5 = new Rooms("\"Dungeon\": " ,
+                "Dark place where light is dim", setSouth.room8);
+        room6 = new Rooms("\"Dungeon\": " ,
+                "Dark place where light is dim", setNorth.room3, setSouth.room9);
+        room7 = new Rooms("\"Dungeon\": " ,
+                "Dark place where light is dim", setNorth.Room4, setEast.room8);
+        room8 = new Rooms("\"Dungeon\": " ,
+                "Dark place where light is dim", setNorth.room5, setEast.room9, setWest.room7);
+
         currentRoom = room1;
     }
 
