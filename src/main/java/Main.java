@@ -8,5 +8,6 @@ public class Main {
         System.out.println("Jeg var platinum i LOL");
         System.out.println("jeg var gladiator i Arena WoW");
         System.out.println("Jeg raidede mythic i BFA");
+        System.out.println("WoW tog alt min tid");
     }
 }
