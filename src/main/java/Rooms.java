@@ -49,7 +49,7 @@ public class Rooms {
         this.n = n;
     }
 
-    public void setE(){
+    public void setE(Rooms e){
         this.e = e;
     }
 
