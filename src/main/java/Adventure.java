@@ -89,7 +89,7 @@ public class Adventure {
                 break;
 
             default:
-                System.out.println("Please enter north, east, south or west");
+                System.out.println("Invalid user input. Please enter north, east, south or west");
                 break;
             }
 
