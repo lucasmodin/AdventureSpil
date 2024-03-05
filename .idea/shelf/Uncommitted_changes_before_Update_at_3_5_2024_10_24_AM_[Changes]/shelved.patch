@@ -1,0 +1,265 @@
+Index: src/main/java/UserInterface.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Scanner;\r\n\r\npublic class UserInterface {\r\n    Adventure adventure = new Adventure();\r\n\r\n    public void startGame(){\r\n        Scanner input = new Scanner(System.in);\r\n        String userInput =input.nextLine().toLowerCase();\r\n\r\n        switch (userInput) {\r\n\r\n            case \"north\":\r\n\r\n                break;\r\n\r\n            case \"south\":\r\n\r\n                break;\r\n\r\n            case \"west\":\r\n\r\n                break;\r\n\r\n            case \"east\":\r\n\r\n                break;\r\n\r\n            case \"look\":\r\n\r\n                break;\r\n\r\n            case \"help\":\r\n\r\n                break;\r\n\r\n            case \"exit\":\r\n\r\n                break;\r\n\r\n\r\n\r\n        }\r\n\r\n\r\n\r\n\r\n    }\r\n\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/UserInterface.java b/src/main/java/UserInterface.java
+--- a/src/main/java/UserInterface.java	(revision 367365aa4d999673deb5b77ec8ada3ae91a5e85f)
++++ b/src/main/java/UserInterface.java	(date 1709630683804)
+@@ -5,12 +5,11 @@
+ 
+     public void startGame(){
+         Scanner input = new Scanner(System.in);
+-        String userInput =input.nextLine().toLowerCase();
++        String userInput = input.nextLine().toLowerCase();
+ 
+         switch (userInput) {
+ 
+             case "north":
+-
+                 break;
+ 
+             case "south":
+Index: src/main/java/Adventure.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Adventure {\r\n    Rooms room1;\r\n    Rooms room2;\r\n    Rooms room3;\r\n    Rooms room4;\r\n    Rooms room5;\r\n    Rooms room6;\r\n    Rooms room7;\r\n    Rooms room8;\r\n    Rooms room9;\r\n\r\n    private Rooms currentRoom;\r\n\r\n    //Constructor is set to room1 for the starting point\r\n    public Adventure(){\r\n        room1 = new Rooms(\"\\\"Dungeon\\\": \" , \"Dark place where light is dim\");\r\n        room2 = new Rooms(\"\\\"Dungeon\\\": \" , \"Dark place where light is dim\");\r\n        room3 = new Rooms(\"\\\"Dungeon\\\": \" , \"Dark place where light is dim\");\r\n        room4 = new Rooms(\"\\\"Dungeon\\\": \" , \"Dark place where light is dim\");\r\n        room5 = new Rooms(\"\\\"Dungeon\\\": \" , \"Dark place where light is dim\");\r\n        room6 = new Rooms(\"\\\"Dungeon\\\": \" , \"Dark place where light is dim\");\r\n        room7 = new Rooms(\"\\\"Dungeon\\\": \" , \"Dark place where light is dim\");\r\n        room8 = new Rooms(\"\\\"Dungeon\\\": \" , \"Dark place where light is dim\");\r\n        room9 = new Rooms(\"\\\"Dungeon\\\": \" , \"Dark place where light is dim\");\r\n\r\n        room1.setW(room2);\r\n        room1.setS(room4);\r\n\r\n        room2.setE(room3);\r\n        room2.setW(room1);\r\n\r\n        room3.setS(room6);\r\n        room3.setW(room2);\r\n\r\n        room4.setN(room1);\r\n        room4.setS(room7);\r\n\r\n        room5.setS(room8);\r\n\r\n        room6.setS(room9);\r\n        room6.setN(room3);\r\n\r\n        room7.setN(room4);\r\n        room7.setE(room8);\r\n\r\n        room8.setN(room5);\r\n        room8.setE(room9);\r\n        room8.setW(room7);\r\n\r\n        room9.setN(room6);\r\n        room9.setW(room8);\r\n\r\n        currentRoom = room1;\r\n    }\r\n\r\n\r\n\r\n    public String look(){\r\n        return currentRoom.getName() + currentRoom.getDescription();\r\n    }\r\n//    public Rooms getRoom(){\r\n//        return currentRoom\r\n//    }\r\n\r\n    public void goNorth(){\r\n\r\n    }\r\n\r\n    public void goSouth(){\r\n\r\n    }\r\n\r\n    public void goWest(){\r\n\r\n    }\r\n\r\n    public void goEast(){\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Adventure.java b/src/main/java/Adventure.java
+--- a/src/main/java/Adventure.java	(revision 367365aa4d999673deb5b77ec8ada3ae91a5e85f)
++++ b/src/main/java/Adventure.java	(date 1709556515209)
+@@ -14,16 +14,16 @@
+     //Constructor is set to room1 for the starting point
+     public Adventure(){
+         room1 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+-        room2 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+-        room3 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+-        room4 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+-        room5 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+-        room6 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+-        room7 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+-        room8 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
+-        room9 = new Rooms("\"Dungeon\": " , "Dark place where light is dim");
++        room2 = new Rooms("\"forest\": " , "Dark place where light is dim");
++        room3 = new Rooms("\"bob\": " , "Dark place where light is dim");
++        room4 = new Rooms("\"cave\": " , "Dark place where light is dim");
++        room5 = new Rooms("\"castle\": " , "Dark place where light is dim");
++        room6 = new Rooms("\"prison\": " , "Dark place where light is dim");
++        room7 = new Rooms("\"library\": " , "Dark place where light is dim");
++        room8 = new Rooms("\"thr dirt\": " , "Dark place where light is dim");
++        room9 = new Rooms("\"treasure\": " , "Dark place where light is dim");
+ 
+-        room1.setW(room2);
++        room1.setE(room2);
+         room1.setS(room4);
+ 
+         room2.setE(room3);
+@@ -58,6 +58,15 @@
+     public String look(){
+         return currentRoom.getName() + currentRoom.getDescription();
+     }
++    public String lookUpRoomsParent(String parent) {
++        if (parent.equals("mother")) {
++            return current.getMother().getName();
++        } else return current.getFather().getName();
++    }
++
++    public String getCurrentRoom(){
++        return currentRoom.getName();
++    }
+ //    public Rooms getRoom(){
+ //        return currentRoom
+ //    }
+@@ -74,7 +83,10 @@
+ 
+     }
+ 
+-    public void goEast(){
++    public void goEast(Rooms thisRoom){
++        if(currentRoom.getE() != null){
++            currentRoom = thisRoom;
+ 
++            }
+     }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"64eccb92-7123-4761-9dd7-957584a7a99b\" name=\"Changes\" comment=\"first commit\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2dDPEfUe3ErhTheppnPj4vKDwQb\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"64eccb92-7123-4761-9dd7-957584a7a99b\" name=\"Changes\" comment=\"\" />\r\n      <created>1709539567902</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1709539567902</updated>\r\n      <workItem from=\"1709539568995\" duration=\"302000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709539669684</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709539669684</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"first commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709539906995</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709539906995</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"first commit\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"first commit\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 367365aa4d999673deb5b77ec8ada3ae91a5e85f)
++++ b/.idea/workspace.xml	(date 1709553320393)
+@@ -4,7 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="64eccb92-7123-4761-9dd7-957584a7a99b" name="Changes" comment="first commit" />
++    <list default="true" id="64eccb92-7123-4761-9dd7-957584a7a99b" name="Changes" comment="Rasmus commit 3">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -19,6 +24,20 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "HugTheMainframe"
++  }
++}]]></component>
++  <component name="GithubPullRequestsUISettings">
++    <option name="selectedUrlAndAccountId">
++      <UrlAndAccount>
++        <option name="accountId" value="080148b7-98ed-4b43-801b-889482dbfa6f" />
++        <option name="url" value="https://github.com/lucasmodin/AdventureSpil.git" />
++      </UrlAndAccount>
++    </option>
+   </component>
+   <component name="ProjectId" id="2dDPEfUe3ErhTheppnPj4vKDwQb" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+@@ -28,6 +47,7 @@
+   </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
++    "Application.Main.executor": "Run",
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "git-widget-placeholder": "main",
+@@ -66,14 +86,96 @@
+       <option name="project" value="LOCAL" />
+       <updated>1709539906995</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Hey dude&#10;yoyoyoyo">
++      <option name="closed" value="true" />
++      <created>1709540447396</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1709540447396</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Hey dude&#10;commit 4">
++      <option name="closed" value="true" />
++      <created>1709540746941</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1709540746941</updated>
++    </task>
++    <task id="LOCAL-00005" summary="Hey dude&#10;commit 5">
++      <option name="closed" value="true" />
++      <created>1709540794068</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1709540794068</updated>
++    </task>
++    <task id="LOCAL-00006" summary="Hey dude&#10;commit 8">
++      <option name="closed" value="true" />
++      <created>1709541470560</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1709541470560</updated>
++    </task>
++    <task id="LOCAL-00007" summary="Rasmus commit">
++      <option name="closed" value="true" />
++      <created>1709547246615</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1709547246615</updated>
++    </task>
++    <task id="LOCAL-00008" summary="Rasmus commit 2">
++      <option name="closed" value="true" />
++      <created>1709549083625</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1709549083625</updated>
++    </task>
++    <task id="LOCAL-00009" summary="Rasmus commit 3">
++      <option name="closed" value="true" />
++      <created>1709551190195</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1709551190195</updated>
++    </task>
++    <task id="LOCAL-00010" summary="Rasmus commit 3">
++      <option name="closed" value="true" />
++      <created>1709551722397</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1709551722397</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="first commit" />
+-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
++    <MESSAGE value="Hey dude&#10;yoyoyoyo" />
++    <MESSAGE value="Hey dude&#10;commit 4" />
++    <MESSAGE value="Hey dude&#10;commit 5" />
++    <MESSAGE value="Hey dude&#10;commit 8" />
++    <MESSAGE value="Rasmus commit" />
++    <MESSAGE value="Rasmus commit 2" />
++    <MESSAGE value="Rasmus commit 3" />
++    <option name="LAST_COMMIT_MESSAGE" value="Rasmus commit 3" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n    <option name=\"workspaceImportForciblyTurnedOn\" value=\"true\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 367365aa4d999673deb5b77ec8ada3ae91a5e85f)
++++ b/.idea/misc.xml	(date 1709539918562)
+@@ -1,12 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="MavenProjectsManager">
+     <option name="originalFiles">
+       <list>
+         <option value="$PROJECT_DIR$/pom.xml" />
+       </list>
+     </option>
+-    <option name="workspaceImportForciblyTurnedOn" value="true" />
+   </component>
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
